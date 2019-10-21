@@ -57,6 +57,14 @@
                 </td>
             </tr>
             <?php } ?>
+					    <tr valign="top">
+                <th scope="row">
+                    <?php _e("Show this plugin some love", 'betaanalytics'); ?>
+                </th>
+                 <td>
+					<a href="https://wordpress.org/plugins/simple-analytics-tag-beta/" target="_blank"><?php _e('Write a review and rate this plugin.','betaanalytics'); ?></a>
+                </td>
+            </tr> 
 		</table>
 	
         <?php submit_button(); ?>
