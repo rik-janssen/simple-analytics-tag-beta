@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/donate/?token=y9x2_N0_18pSbdHE9l9jivsqB3aTKg
 Requires at least: 5.2
 Tested up to: 5.2.4
 Requires PHP: 5.8
-Stable tag: 0.1
+Stable tag: 0.5
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -45,6 +45,10 @@ No. The entire thing is free and will be for the unforseeable future. A cup of c
 1. Add your UA or GTM code in the field. For GTM codes there are extra settings.
 
 == Changelog ==
+= 0.2 to 0.5 =
+* Better hook support
+* GTM tags now supported as well
+
 = 0.1 =
 * First version. All the basic functionalities. 
 
