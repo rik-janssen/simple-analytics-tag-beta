@@ -22,6 +22,7 @@
                      <p><?php _e('You can paste the Google Analytics or Google Tag Manager ID here. Not sure how to get those? Check out this guide how to obtain the ID.','betaanalytics'); ?></p>
                 </td>
             </tr> 
+            <?php if(bcSANY_tag_type()=='GTM'){ ?>
             <tr valign="top">
                 <th scope="row">
                     <?php _e("Ways of code placement", 'betajanitor'); ?>
@@ -53,7 +54,8 @@
                            class="regular-text code"/>
                     <?php } ?>
                 </td>
-            </tr> 
+            </tr>
+            <?php } ?>
 		</table>
 	
         <?php submit_button(); ?>
