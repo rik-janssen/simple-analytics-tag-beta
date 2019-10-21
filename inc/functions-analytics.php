@@ -42,28 +42,45 @@ function bcSANY_tracking_head(){
     }
 }
 
+add_action( 'wp_head', 'bcSANY_tracking_head' , 5);
 
-function bcSANY_tracking_foot(){
-    
-     $the_google_id = substr(get_option( 'bcSANY_google_tags' ), 0,16);
 
+function bcSANY_tracking_body(){
     
-    if(bcSANY_tag_type()=='GTM'){
-        ?>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $the_google_id; ?>"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        <?php
+    $the_google_id = substr(get_option( 'bcSANY_google_tags' ), 0,16);
+    $setting_gtm_diy = substr(get_option( 'bcSANY_google_embed' ), 0,1);
+    if($setting_gtm_diy==0){
+        if(bcSANY_tag_type()=='GTM'){
+            ?>
+            <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $the_google_id; ?>"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+            <?php
+        }
     }
     
 }
 
+add_action( 'wp_body_open', 'bcSANY_tracking_body' , 1);
+
 function bcSANY_tm_body(){
     
+    $the_google_id = substr(get_option( 'bcSANY_google_tags' ), 0,16);
+    $setting_gtm_diy = substr(get_option( 'bcSANY_google_embed' ), 0,1);
+
     /* this is the DIY function */
-    
-     bcSANY_tracking_foot();
+    if($setting_gtm_diy==1){
+         if(bcSANY_tag_type()=='GTM'){
+            ?>
+            <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $the_google_id; ?>"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+            <?php
+        }
+        
+    }
     
 }
 

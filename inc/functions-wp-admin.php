@@ -78,7 +78,7 @@ function bcSANY_check_input($arg, $label=''){
 			   <?php 
 				if($arg['selected']==$arg['val']){ echo "checked"; } ?> />
 		<span></span>
-		<?php if ($label!=''){ echo "<label>".__($label,'betajanitor')."</label>"; } ?>
+		<?php if ($label!=''){ echo "<label>".__($label,'betaanalytics')."</label>"; } ?>
 	</label>
 </div>
 <?php
@@ -198,12 +198,12 @@ function bcSANY_imageselect_field($arg){
 	if($img != "") { ?>
 	<div class="bcSANY_thumbnail">
 		<img src="<?= $img[0]; ?>" width="80px" />
-		<p><?php _e('The currently selected image.','betajanitor'); ?></p>
+		<p><?php _e('The currently selected image.','betaanalytics'); ?></p>
 	</div>
-	<p><?php _e('Select a new image or paste a image ID to replace the one above:','betajanitor'); ?></p>
+	<p><?php _e('Select a new image or paste a image ID to replace the one above:','betaanalytics'); ?></p>
 
 	<?php }else{ ?>
-	<p><?php _e('Select an image or paste an image ID:','betajanitor'); ?></p>	
+	<p><?php _e('Select an image or paste an image ID:','betaanalytics'); ?></p>	
 	<?php }	?>
 	<input type="text" 
 		   value="<?php echo $arg['selected']; ?>" 
@@ -213,7 +213,7 @@ function bcSANY_imageselect_field($arg){
 		   max="" 
 		   min="1" 
 		   step="1" />
-	<button class="<?php echo 'bcSANY_'.$arg['name']; ?> button"><?php _e('Media library','betajanitor'); ?></button>
+	<button class="<?php echo 'bcSANY_'.$arg['name']; ?> button"><?php _e('Media library','betaanalytics'); ?></button>
 	</div>
 	<?php
 }
