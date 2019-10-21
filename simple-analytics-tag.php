@@ -1,7 +1,7 @@
 <?php 
 /**
 * Plugin Name: Simple Analytics Tag | Beta
-* Plugin URI: https://betacore.tech/wp-admin-janitor/
+* Plugin URI: https://betacore.tech/simple-analytics-tag-for-wordpress/
 * Description: Google Analytics and Google Tagmanager made simple.
 * Version: 0.5
 * Author: Beta
