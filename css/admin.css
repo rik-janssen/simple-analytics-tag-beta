@@ -1,0 +1,70 @@
+/* ------------------------------ */
+/* By Rik Janssen / Betacore.tech */
+/* ------------------------------ */
+
+/* the form styles */
+
+.bcSANY_thumbnail{
+	padding: 10px;
+	border: 1px solid #DAE1E7;
+	background-color: #fff;
+	display: inline-block;
+	min-width: 25em;
+	border-radius: 2px;
+	overflow: hidden;
+	box-sizing: border-box;
+
+}
+
+.bcSANY_thumbnail img{
+	border: 1px solid #CDD2D8;
+	background-color: #fff;
+	border-radius: 2px;
+	float: left;
+	margin-right: 10px;
+}
+
+.bcSANY_thumbnail p{
+	margin: 0px !important;
+	padding: 0px !important;
+	line-height: 19px;
+}
+
+/* the plugin page footer */
+
+.bcSANY_janitor_footer{
+	overflow: hidden;
+	margin-top: 50px;
+	padding-top: 25px;
+	margin-right: 30px;
+	border-top: 1px dotted #888;
+	color: #888 !important;
+}
+
+.bcSANY_janitor_footer a{
+	display: inline-block;
+	margin-right: 40px;
+	float: left;
+	color: #272727;
+}
+
+.bcSANY_janitor_footer a:hover{
+	color: #68A8F5;
+}
+
+
+.bcSANY_janitor_footer a img{
+	max-width: 80px;
+}
+
+.bcSANY_janitor_footer h2,
+.bcSANY_janitor_footer p{
+	margin: 0px;
+	padding: 0px;
+	padding-top: 5px;
+	color: #313131 !important;
+}
+
+.bcSANY_donate{
+	float: right;
+}
