@@ -1,21 +1,11 @@
 <?php 
-/* ---------------------------------------- */
-/* adding the stylesheet to WP-admin */
-
-// todo:
-// a check if its TM or UA
-// header hook (TM or UA)
-// footer hook (TM)
-// custom hook (TM)
-
 
 /* ---------------------------------------- */
-/* The Tracking tag for GA and TM           */
+/* The Tracking tag for GA and TM header    */
 
 function bcSANY_tracking_head(){
     
      $the_google_id = substr(get_option( 'bcSANY_google_tags' ), 0,16);
-
     
     if(bcSANY_tag_type()=='UA'){
         ?>
@@ -29,6 +19,7 @@ function bcSANY_tracking_head(){
           gtag('config', '<?php echo $the_google_id; ?>');
         </script>
         <?php
+        
     }elseif(bcSANY_tag_type()=='GTM'){
         ?>
         <!-- Google Tag Manager -->
@@ -44,6 +35,9 @@ function bcSANY_tracking_head(){
 
 add_action( 'wp_head', 'bcSANY_tracking_head' , 5);
 
+
+/* ---------------------------------------- */
+/* The TM body function, for new themes     */
 
 function bcSANY_tracking_body(){
     
@@ -63,6 +57,33 @@ function bcSANY_tracking_body(){
 }
 
 add_action( 'wp_body_open', 'bcSANY_tracking_body' , 1);
+
+
+/* ---------------------------------------- */
+/* The TM body function, for old themes     */
+
+function bcSANY_tracking_footer(){
+    
+    $the_google_id = substr(get_option( 'bcSANY_google_tags' ), 0,16);
+    $setting_gtm_diy = substr(get_option( 'bcSANY_google_embed' ), 0,1);
+    if($setting_gtm_diy==2){
+        if(bcSANY_tag_type()=='GTM'){
+            ?>
+            <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $the_google_id; ?>"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+            <?php
+        }
+    }
+    
+}
+
+add_action( 'wp_footer', 'bcSANY_tracking_footer' , 1);
+
+
+/* ---------------------------------------- */
+/* The TM body function, for custom and old */
 
 function bcSANY_tm_body(){
     
@@ -85,6 +106,8 @@ function bcSANY_tm_body(){
 }
 
 
+/* ---------------------------------------- */
+/* Get the full type code                   */
 
 function bcSANY_tag_type(){
     
@@ -93,6 +116,7 @@ function bcSANY_tag_type(){
     if($the_google_tag=='GT'){$the_google_tag='GTM';}
     
     return $the_google_tag;
+    
 }
 
 ?>

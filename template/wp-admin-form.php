@@ -38,8 +38,9 @@
                     }
                     $input_vars = array( 'name'=>'google_embed',
                                          'options'=>array(
-                                                        array('var'=>'0','var_name'=>'Add the Google Tagmanager tag to the wp_body_open hook. If you have your custom template you meight want to add the wp_body_open(); function just below the body tag. (recommended)'),
-                                                        array('var'=>'1', 'var_name'=>'Place the function below in your header.php below the body tag. This works better but be careful using this on templates from other developers that will be updated from time to time. Your changes can be lost after an update. Enabling this option will remove the function from the footer hook so you can add it yourself.')
+                                                        array('var'=>'0','var_name'=>'<strong>For newer themes: </strong>Add the Google Tagmanager tag to the wp_body_open hook. If you have your custom template you meight want to add the wp_body_open(); function just below the body tag. (recommended)'),
+                                                        array('var'=>'1', 'var_name'=>'<strong>The DIY solution: </strong>Place the function below in your header.php below the body tag. This works better but be careful using this on templates from other developers that will be updated from time to time. Your changes can be lost after an update. Enabling this option will remove the function from the footer hook so you can add it yourself.'),
+                                                        array('var'=>'2', 'var_name'=>'<strong>For older themes:</strong> place the GTM function in the footer hook. This is less efficient but still works.')
                                                     ),
                                          'selected'=>$get_the_embed_id
                                        );
