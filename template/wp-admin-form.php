@@ -19,7 +19,7 @@
                                        );
 
                     bcSANY_input_field($input_vars); ?>
-                     <p><?php _e('You can paste the Google Analytics or Google Tag Manager ID here. Not sure how to get those? Check out this guide how to obtain the ID.','betaanalytics'); ?></p>
+                     <p><?php _e('You can paste the Google Analytics (UA) or Google Tag Manager (GTM) ID here. Not sure how to get those? Check out this guide how to obtain the ID for <a href="https://support.google.com/analytics/answer/1008080?hl=en" target="_blank">Google Analytics</a> or <a href="https://support.google.com/tagmanager/answer/6103696?hl=en" target="_blank">Google Tagmanager</a>.','betaanalytics'); ?></p>
                 </td>
             </tr> 
             <?php if(bcSANY_tag_type()=='GTM'){ ?>
@@ -60,13 +60,6 @@
 	
         <?php submit_button(); ?>
      </form>
-		
-	<h3>Todo</h3>
-	<ul>
-		<li>Add GTM or UA code</li>
-		<li>Select: add automatic GTM in footer or place own function below BODY</li>
-		
-	</ul>
 </div>
 
 
