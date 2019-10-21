@@ -12,7 +12,7 @@ add_action('admin_enqueue_scripts', 'bcSANY_janitor_admin');
 /* ---------------------------------------- */
 /* the WP-admin page with the settings */
 
-function bcSANY_function_for_jan(){
+function bcSANY_function_for_analytics(){
 	
 	// this is the page itself that you will find under the wp-admin
 	// settings > Offline button
@@ -28,7 +28,7 @@ function bcSANY_function_for_jan(){
 function bcSANY_settings_register() {
 	
 	// this corresponds to some information added at the top of the form
-	$setting_name = 'bcSANY_janitorsettings';
+	$setting_name = 'bcSANY_analyticssettings';
 	
 	// sanitize settings
     $args_html = array(
@@ -46,8 +46,8 @@ function bcSANY_settings_register() {
             );
 	
 	// adding the information to the database as options
-    register_setting( $setting_name, 'bcSANY_site_offline', $args_int ); // radio
-    register_setting( $setting_name, 'bcSANY_janitor_redirect', $args_int ); // radio
+    register_setting( $setting_name, 'bcSANY_google_tags', $args_text ); // textarea
+    register_setting( $setting_name, 'bcSANY_google_embed', $args_int ); // radio
 
 	
 	
@@ -99,6 +99,30 @@ function bcSANY_select_box($arg){
 			?><option value="<?php echo $value['op_value']; ?>"<?php echo $checkme; ?>><?php echo $value['op_name'];; ?></option><?php
 		} ?>
 	</select>
+</div>
+<?php
+}
+
+
+/* ---------------------------------------- */
+/* This one is a radio list                 */
+
+function bcSANY_radio_input($arg){
+?>
+<div class="bcSANY_radio_wrapper">
+	<label for="bcSANY_<?php echo $arg['name']; ?>">
+        <ul>
+		<?php // making a list of the options
+		foreach($arg['options'] as $name => $value){
+			if($value['var']==$arg['selected']){$checkme=' checked';}else{$checkme='';}
+			?><li><label>
+              <input type="radio" 
+                     value="<?php echo $value['var']; ?>"
+                     name="bcSANY_<?php echo $arg['name']; ?>" 
+                     <?php echo $checkme; ?>><?php echo $value['var_name']; ?></label></li><?php
+		} ?>
+        </ul>
+	</label>
 </div>
 <?php
 }

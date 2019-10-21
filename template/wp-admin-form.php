@@ -1,25 +1,57 @@
 <div class="wrap">
 		
-    <h1>The WP-admin Janitor</h1>
+    <h1>Analytics Tag</h1>
 
     <form method="post" action="options.php">
-        <?php settings_fields( 'bcSANY_offlinesettings' ); ?>
-        <?php do_settings_sections( 'bcSANY_offlinesettings' ); ?>
+        <?php settings_fields( 'bcSANY_analyticssettings' ); ?>
+        <?php do_settings_sections( 'bcSANY_analyticssettings' ); ?>
         
         
         <table class="bcSANY_forms form-table">
             <tr valign="top">
                 <th scope="row">
-                    <?php _e("Disable the posts", 'betajanitor'); ?>
+                    <?php _e("The Google Analytics or Google Tagmanager ID", 'betajanitor'); ?>
                 </th>
                  <td>
                     <?php 
-                    $check_vars = array( 'name'=>'disable_posts',
-                                         'val'=>'1',
-                                         'selected'=>get_option('bcSANY_disable_posts')
+                    $input_vars = array( 'name'=>'google_tags',
+                                         'selected'=>get_option('bcSANY_google_tags')
                                        );
 
-                    bcSANY_check_input($check_vars, 'Disable the posts from the WP-admin menu.'); ?>
+                    bcSANY_input_field($input_vars); ?>
+                     <p><?php _e('You can paste the Google Analytics or Google Tag Manager ID here. Not sure how to get those? Check out this guide how to obtain the ID.','betaanalytics'); ?></p>
+                </td>
+            </tr> 
+            <tr valign="top">
+                <th scope="row">
+                    <?php _e("Ways of code placement", 'betajanitor'); ?>
+                </th>
+                 <td>
+                     <p><strong><?php _e('For Google Tagmanager Only!','betaanalytics'); ?></strong></p>
+                     <p><?php _e('The custom function is recommended for use in home-built templates only! Otherwise leave this as-is.','betaanalytics'); ?></p>
+                    <?php 
+                    if(get_option('bcSANY_google_embed')==''){
+                        $get_the_embed_id = 0;
+                    }else{
+                        $get_the_embed_id = get_option('bcSANY_google_embed');   
+                    }
+                    $input_vars = array( 'name'=>'google_embed',
+                                         'options'=>array(
+                                                        array('var'=>'0','var_name'=>'Add the Google Tagmanager tag to the footer hook. This is less efficient but still works. (recommended)'),
+                                                        array('var'=>'1', 'var_name'=>'Place the function below in your header.php below the body tag. This works better but be careful using this on templates from other developers that will be updated from time to time. Your changes can be lost after an update. Enabling this option will remove the function from the footer hook so you can add it yourself.')
+                                                    ),
+                                         'selected'=>$get_the_embed_id
+                                       );
+
+                    bcSANY_radio_input($input_vars); ?>
+                     
+                    <?php if (get_option('bcSANY_google_embed')==1){ ?>
+                    <br />
+                    <p><?php _e('Put this function right below the body element in the header.php file.','betaanalytics'); ?></p>
+                    <input type="text"
+                           value="if(function_exists(bcSANY_tm_body())){bcSANY_tm_body();}" 
+                           class="regular-text code"/>
+                    <?php } ?>
                 </td>
             </tr> 
 		</table>
@@ -29,20 +61,9 @@
 		
 	<h3>Todo</h3>
 	<ul>
-		<li>Change top icon for own logo</li>
-		<li>Change login icon for own logo</li>
-		<li>Clean up widgets (one by one)</li>
-        <li>Enable the oldscool links</li>
-        <li>Disable the posts</li>
-        <li>Disable the comments site wide</li>
-        <li>The option to email an update every monday (updates, php version etc)</li>
-		<li>Keep this plugin for administrators only (level check)</li>
-		<li>New widget: popular posts</li>
-		<li>New widget: plugins, themes and other things that need updates and health status</li>
-        <li>New widget: custom widget for contact details</li>
-        <li>Tab: offline -> install plugin from there if needed, forward tab when installed</li>
-        <li>Tab: clean analytics (new) -> install plugin from there if needed, forward tab when installed</li>
-        <li>branding.php -> add a branding file so we can upload this for commpanion and then use it on multiple sites</li>
+		<li>Add GTM or UA code</li>
+		<li>Select: add automatic GTM in footer or place own function below BODY</li>
+		
 	</ul>
 </div>
 
