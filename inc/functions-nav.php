@@ -17,7 +17,6 @@ function bcSANY_admin_menu_analytics_siteoffline() {
         'bcSANY_function_for_analytics'  // this should correspond with the function name
     ); 
 }
-
 add_action( 'admin_menu', 'bcSANY_admin_menu_analytics_siteoffline' );
 
 
