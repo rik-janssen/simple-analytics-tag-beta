@@ -2,10 +2,10 @@
 /* ---------------------------------------- */
 /* adding the stylesheet to WP-admin */
 
-function bcSANY_janitor_admin() {
-  wp_enqueue_style('beta-janitor', plugin_dir_url( __DIR__ ).'css/admin.css');
+function bcSANY_css_admin() {
+  wp_enqueue_style('beta-analytics-admin', plugin_dir_url( __DIR__ ).'css/admin.css');
 }
-add_action('admin_enqueue_scripts', 'bcSANY_janitor_admin');
+add_action('admin_enqueue_scripts', 'bcSANY_css_admin');
 
 
 
