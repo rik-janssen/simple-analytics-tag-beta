@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Simple Analytics Tag | Beta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-04 14:53+0000\n"
+"PO-Revision-Date: 2019-11-04 14:58+0000\n"
+"Last-Translator: rik <rik@commpanion.nl>\n"
+"Language-Team: \n"
+"Language: nl_BE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.2.4\n"
+"X-Loco-Template: lang/betaanalytics-nl_NL.po"
+
+#. Author of the plugin
+msgid "Beta"
+msgstr "Beta"
+
+#: template/wp-admin-form.php:31
+msgid "For Google Tagmanager Only!"
+msgstr "Alleen voor Google Tagmanager!"
+
+#. Description of the plugin
+msgid "Google Analytics and Google Tagmanager made simple."
+msgstr "Google Analytics en Google Tagmanager, maar dan simpel!"
+
+#. Author URI of the plugin
+msgid "https://betacore.tech/"
+msgstr "https://betacore.tech/"
+
+#. URI of the plugin
+msgid "https://betacore.tech/simple-analytics-tag-for-wordpress/"
+msgstr "https://betacore.tech/simple-analytics-tag-for-wordpress/"
+
+#: inc/functions-wp-admin.php:216
+msgid "Media library"
+msgstr "Media bibliotheek"
+
+#: template/wp-admin-form.php:52
+msgid "Put this function right below the body element in the header.php file."
+msgstr ""
+"Plaats deze functie in het header.php file, recht onder het body attribuut."
+
+#: inc/functions-wp-admin.php:203
+msgid "Select a new image or paste a image ID to replace the one above:"
+msgstr ""
+"Selecteer een nieuwe afbeelding of plak een afbeelding-ID om de bovenstaande "
+"te vervangen:"
+
+#: inc/functions-wp-admin.php:206
+msgid "Select an image or paste an image ID:"
+msgstr "Selecteer een nieuwe afbeelding of plak een afbeelding-ID:"
+
+#: template/wp-admin-form.php:62
+msgid "Show this plugin some love"
+msgstr "Geef deze plugin liefde"
+
+#. Name of the plugin
+msgid "Simple Analytics Tag | Beta"
+msgstr "Simple Analytics Tag | Beta"
+
+#: inc/functions-wp-admin.php:201
+msgid "The currently selected image."
+msgstr "De huidig geselecteerde afbeelding."
+
+#: template/wp-admin-form.php:32
+msgid ""
+"The custom function is recommended for use in home-built templates only! "
+"Otherwise leave this as-is."
+msgstr ""
+"De custom functie is aanbevolen voor huis-gemaakte templates! Wanneer dit "
+"niet het geval is, laat het zo."
+
+#: template/wp-admin-form.php:13
+msgid "The Google Analytics or Google Tagmanager ID"
+msgstr "De Google Analytics of Google Tagmanager ID"
+
+#: template/wp-admin-form.php:65
+msgid "Write a review and rate this plugin."
+msgstr "Schrijf een review en geef deze plugin sterretjes."
+
+#: template/wp-admin-form.php:22
+msgid ""
+"You can paste the Google Analytics (UA) or Google Tag Manager (GTM) ID here. "
+"Not sure how to get those? Check out this guide how to obtain the ID for <a "
+"href=\"https://support.google.com/analytics/answer/1008080?hl=en\" "
+"target=\"_blank\">Google Analytics</a> or <a href=\"https://support.google."
+"com/tagmanager/answer/6103696?hl=en\" target=\"_blank\">Google Tagmanager</a>"
+"."
+msgstr ""
+"Je kunt je Google Tagmanager (GTM) of Google Analytics (UA) code hier "
+"plakken. Weet je niet hoe je die kunt verkrijgen? Lees dan hier waar je ze "
+"kunt vinden bij <a href=\"https://support.google."
+"com/analytics/answer/1008080?hl=en\" target=\"_blank\">Google Analytics</a> "
+"of <a href=\"https://support.google.com/tagmanager/answer/6103696?hl=en\" "
+"target=\"_blank\">Google Tagmanager</a>."

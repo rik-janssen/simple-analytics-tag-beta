@@ -10,7 +10,7 @@
         <table class="bcSANY_forms form-table">
             <tr valign="top">
                 <th scope="row">
-                    <?php _e("The Google Analytics or Google Tagmanager ID", 'betajanitor'); ?>
+                    <?php _e("The Google Analytics or Google Tagmanager ID", 'betaanalytics'); ?>
                 </th>
                  <td>
                     <?php 

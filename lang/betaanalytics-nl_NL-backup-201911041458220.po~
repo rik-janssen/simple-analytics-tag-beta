@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Simple Analytics Tag | Beta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-04 14:53+0000\n"
+"PO-Revision-Date: 2019-11-04 14:54+0000\n"
+"Last-Translator: rik <rik@commpanion.nl>\n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.2.4"
+
+#. Author of the plugin
+msgid "Beta"
+msgstr ""
+
+#: template/wp-admin-form.php:31
+msgid "For Google Tagmanager Only!"
+msgstr ""
+
+#. Description of the plugin
+msgid "Google Analytics and Google Tagmanager made simple."
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://betacore.tech/"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://betacore.tech/simple-analytics-tag-for-wordpress/"
+msgstr ""
+
+#: inc/functions-wp-admin.php:216
+msgid "Media library"
+msgstr ""
+
+#: template/wp-admin-form.php:52
+msgid "Put this function right below the body element in the header.php file."
+msgstr ""
+
+#: inc/functions-wp-admin.php:203
+msgid "Select a new image or paste a image ID to replace the one above:"
+msgstr ""
+
+#: inc/functions-wp-admin.php:206
+msgid "Select an image or paste an image ID:"
+msgstr ""
+
+#: template/wp-admin-form.php:62
+msgid "Show this plugin some love"
+msgstr ""
+
+#. Name of the plugin
+msgid "Simple Analytics Tag | Beta"
+msgstr ""
+
+#: inc/functions-wp-admin.php:201
+msgid "The currently selected image."
+msgstr ""
+
+#: template/wp-admin-form.php:32
+msgid ""
+"The custom function is recommended for use in home-built templates only! "
+"Otherwise leave this as-is."
+msgstr ""
+
+#: template/wp-admin-form.php:13
+msgid "The Google Analytics or Google Tagmanager ID"
+msgstr ""
+
+#: template/wp-admin-form.php:65
+msgid "Write a review and rate this plugin."
+msgstr ""
+
+#: template/wp-admin-form.php:22
+msgid ""
+"You can paste the Google Analytics (UA) or Google Tag Manager (GTM) ID here. "
+"Not sure how to get those? Check out this guide how to obtain the ID for <a "
+"href=\"https://support.google.com/analytics/answer/1008080?hl=en\" "
+"target=\"_blank\">Google Analytics</a> or <a href=\"https://support.google."
+"com/tagmanager/answer/6103696?hl=en\" target=\"_blank\">Google Tagmanager</a>"
+"."
+msgstr ""
