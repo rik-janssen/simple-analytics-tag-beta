@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/donate/?token=y9x2_N0_18pSbdHE9l9jivsqB3aTKg
 Requires at least: 5.2
 Tested up to: 5.2.4
 Requires PHP: 5.8
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -30,7 +30,7 @@ Simple Analytics Tag contains the following features:
 
 == Frequently Asked Questions ==
 = How simple is it? =
-Oh yes it sure can! The best redirect you've ever seen.
+Oh yes it sure can! Like, super simple! Just pop in the ID and you are good to go!
 
 = Does it work with Google Tagmanager? =
 Yes, it does. Just copy and paste the ID in the field and add the function below the <body> tag. Newer templates have a hook there so that works even better.
@@ -45,6 +45,9 @@ No. The entire thing is free and will be for the unforseeable future. A cup of c
 1. Add your UA or GTM code in the field. For GTM codes there are extra settings.
 
 == Changelog ==
+= 1.1 =
+* Gui fixes
+
 = 1.0 =
 * Full release.
 * Added languages
