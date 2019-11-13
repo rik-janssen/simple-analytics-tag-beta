@@ -3,9 +3,9 @@ Contributors: @betacore
 Tags: google analytics, google tagmanager, google ID, GTM, UA
 Donate link: https://www.paypal.com/donate/?token=y9x2_N0_18pSbdHE9l9jivsqB3aTKgWQ3qGgxg_t6VUUmSU6B2H1hUcANUBzhX5xV0qg2G&country.x=NL&locale.x=NL
 Requires at least: 5.2
-Tested up to: 5.2.4
+Tested up to: 5.3
 Requires PHP: 5.8
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -45,6 +45,9 @@ No. The entire thing is free and will be for the unforseeable future. A cup of c
 1. Add your UA or GTM code in the field. For GTM codes there are extra settings.
 
 == Changelog ==
+= 1.2 =
+* Made compatible with Wordpress 5.3
+
 = 1.1 =
 * Gui fixes
 
