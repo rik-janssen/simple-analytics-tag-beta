@@ -78,10 +78,20 @@
 
 $bcALG_my_plugins = array(
     array(
+        'slug'=>'rebranded-pro-the-agency-toolkit',
+        'name'=>'Re:Branded Pro | The Agency Toolkit',
+        'features'=>'https://betacore.tech/plugins/rebranded-pro-agency-toolkit/',
+        'content'=>'This is a total rebranding package for the WordPress admin built for for agencies, designers and website builders. This plugin also protects essential parts of the WordPress installation in order to create an awesome user experience for the client on the WP-admin dashboard. My other plugins (Super Simple Age Gate, Super Simple Site Offline, Simple Analytics Tag) hook right in! So it feels as if they are part of Re:Branded. Or are they?' ),
+    array(
         'slug'=>'super-simple-site-offline-beta',
         'name'=>'Super Simple Site Offline',
         'features'=>'https://betacore.tech/plugins/super-simple-site-offline-for-wordpress/',
         'content'=>'Site offline plugins are made awesome again with this piece of code. While most site offline plugins are bulky, intrusive and annoying this one is as light as a feather and has no paid options. The nav item is neatly tucked away within the settings menu so it feels like it is part of WordPress.' ),
+    array(
+        'slug'=>'super-simple-recaptcha-v3',
+        'name'=>'Super Simple Recapthca V3',
+        'features'=>'https://betacore.tech/plugins/super-simple-recaptcha-v3/',
+        'content'=>'Got spammers? Add Recaptcha V3 in an instant! Works for any contact form. Uses Google Recaptcha V3. A how-to is included.' ),
     array(
         'slug'=>'simple-analytics-tag-beta',
         'name'=>'Simple Analytics Tag',
