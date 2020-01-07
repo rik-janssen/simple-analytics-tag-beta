@@ -1,10 +1,10 @@
 <?php 
 /**
-* Plugin Name: Simple Analytics Tag
+* Plugin Name: Super Simple Analytics Tag
 * Plugin URI: https://betacore.tech/plugins/simple-analytics-tag-for-wordpress/
 * Description: Google Analytics and Google Tagmanager made simple. Works with Wordpress 5.3 Kirk.
 * Version: 1.3
-* Rik Janssen (Beta)
+* Author: Rik Janssen (Beta)
 * Author URI: https://betacore.tech/
 * Text Domain: betaanalytics
 * Domain Path: /lang
