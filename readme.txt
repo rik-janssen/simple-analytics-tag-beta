@@ -1,11 +1,11 @@
 === Simple Analytics Tag ===
 Contributors: @betacore
 Tags: google analytics, google tagmanager, google ID, GTM, UA
-Donate link: https://www.paypal.com/donate/?token=y9x2_N0_18pSbdHE9l9jivsqB3aTKgWQ3qGgxg_t6VUUmSU6B2H1hUcANUBzhX5xV0qg2G&country.x=NL&locale.x=NL
+Donate link: https://www.patreon.com/betadev
 Requires at least: 5.2
-Tested up to: 5.3
+Tested up to: 5.4
 Requires PHP: 5.8
-Stable tag: 1.3
+Stable tag: 1.3.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,13 +14,15 @@ Embedding Google Analytics and Google Tagmanager made simple.
 == Description ==
 Simple Analytics Tag helps you get up and running quick. This plugin has a non-intrusive interface and fits very well within the Wordpress Settings menu. Just paste in the ID from Google Tagmanager or Google Analytics and you are good to go. For older themes that don't support the hook right after the body tag there is a function available you can throw in to make it work. Easy!
 
-Simple Analytics Tag contains the following features:
+= Simple Analytics Tag contains the following features: =
 * Google Tagmanager Code 
 * Google Analytics Code
 * Just paste in the ID and save!
 * For older themes there is a custom hook
 * Simple and clean admin menu page
 
+= Note that there are themes that don't have the 'wp_body_open();' hook below the body tag =
+For these older themes there is the option to put the second half of the Google Tagmanager code in the footer. This is not optimal but still works. If you have a custom theme you can add the hook below the body yourself or request an update on your theme at the shop that created it. Eitherway this plugin will work on the themes that have or do not have the hook. You will have to look in the source code if both Google Tagmanager code blocks are loaded.
 
 == Installation ==
 1. Upload the unpacked folder to the "/wp-content/plugins/" directory.
@@ -38,6 +40,12 @@ Yes, it does. Just copy and paste the ID in the field and add the function below
 = Does it work with Google Analytics? =
 Yes, it does. Just copy and paste the ID in the field and you are good to go.
 
+= Does it work with all themes? =
+Note that there are themes that don't have the 'wp_body_open();' hook below the body tag in the header.php. 
+For these (older) themes there is the option to put the second half of the Google Tagmanager code in the footer. 
+This is not optimal but still works. If you have a custom theme you can add the hook below the body yourself or request an update on your theme at the shop that created it. 
+Eitherway this plugin will work on the themes that have or do not have the hook. You will have to look in the source code if both Google Tagmanager code blocks are loaded.
+
 = Is half of it unusable because I have to pay? =
 No. The entire thing is free and will be for the unforseeable future. A cup of coffee is welcome though!
 
@@ -45,6 +53,11 @@ No. The entire thing is free and will be for the unforseeable future. A cup of c
 1. Add your UA or GTM code in the field. For GTM codes there are extra settings.
 
 == Changelog ==
+= 1.3.1 =
+* Branding update
+* Readyme update
+* Tested in 5.4
+
 = 1.3 =
 * Branding update
 
