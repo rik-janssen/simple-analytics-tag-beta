@@ -3,13 +3,13 @@ Contributors: @betacore
 Tags: google analytics, google tagmanager, google ID, GTM, UA
 Donate link: https://www.patreon.com/betadev
 Requires at least: 5.2
-Tested up to: 5.4
-Requires PHP: 5.8
-Stable tag: 1.3.1
+Tested up to: 5.5
+Requires PHP: 7
+Stable tag: 1.3.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Embedding Google Analytics and Google Tagmanager made simple.
+Embedding Google Analytics and Google Tagmanager made easy.
 
 == Description ==
 Simple Analytics Tag helps you get up and running quick. This plugin has a non-intrusive interface and fits very well within the Wordpress Settings menu. Just paste in the ID from Google Tagmanager or Google Analytics and you are good to go. For older themes that don't support the hook right after the body tag there is a function available you can throw in to make it work. Easy!
@@ -53,6 +53,10 @@ No. The entire thing is free and will be for the unforseeable future. A cup of c
 1. Add your UA or GTM code in the field. For GTM codes there are extra settings.
 
 == Changelog ==
+= 1.3.2 =
+* Branding update
+* Precautionary extra sanitisation
+
 = 1.3.1 =
 * Branding update
 * Readyme update

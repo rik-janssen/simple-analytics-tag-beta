@@ -10,13 +10,13 @@ function bcSANY_tracking_head(){
     if(bcSANY_tag_type()=='UA'){
         ?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $the_google_id; ?>"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_html($the_google_id); ?>"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', '<?php echo $the_google_id; ?>');
+          gtag('config', '<?php echo esc_html($the_google_id); ?>');
         </script>
         <?php
         
@@ -27,7 +27,7 @@ function bcSANY_tracking_head(){
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','<?php echo $the_google_id; ?>');</script>
+        })(window,document,'script','dataLayer','<?php echo esc_html($the_google_id); ?>');</script>
         <!-- End Google Tag Manager -->
         <?php
     }
@@ -47,7 +47,7 @@ function bcSANY_tracking_body(){
         if(bcSANY_tag_type()=='GTM'){
             ?>
             <!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $the_google_id; ?>"
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo esc_html($the_google_id); ?>"
             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- End Google Tag Manager (noscript) -->
             <?php
@@ -70,7 +70,7 @@ function bcSANY_tracking_footer(){
         if(bcSANY_tag_type()=='GTM'){
             ?>
             <!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $the_google_id; ?>"
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo esc_html($the_google_id); ?>"
             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- End Google Tag Manager (noscript) -->
             <?php
@@ -95,7 +95,7 @@ function bcSANY_tm_body(){
          if(bcSANY_tag_type()=='GTM'){
             ?>
             <!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $the_google_id; ?>"
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo esc_html($the_google_id); ?>"
             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- End Google Tag Manager (noscript) -->
             <?php

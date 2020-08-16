@@ -73,8 +73,8 @@ function bcSANY_check_input($arg, $label=''){
 <div class="bcSANY_check_wrapper">
 	<label>
 		<input type="checkbox" 
-			   name="bcSANY_<?php echo $arg['name']; ?>" 
-			   value="<?php echo $arg['val']; ?>"
+			   name="bcSANY_<?php echo esc_html($arg['name']); ?>" 
+			   value="<?php echo esc_html($arg['val']); ?>"
 			   <?php 
 				if($arg['selected']==$arg['val']){ echo "checked"; } ?> />
 		<span></span>
@@ -92,11 +92,11 @@ function bcSANY_select_box($arg){
 
 ?>
 <div class="bcSANY_select_wrapper">
-	<select name="bcSANY_<?php echo $arg['name']; ?>">
+	<select name="bcSANY_<?php echo esc_html($arg['name']); ?>">
 		<?php // making a list of the options
 		foreach($arg['options'] as $name => $value){
 			if($value['op_value']==$arg['selected']){$checkme=' selected';}else{$checkme='';}
-			?><option value="<?php echo $value['op_value']; ?>"<?php echo $checkme; ?>><?php echo $value['op_name'];; ?></option><?php
+			?><option value="<?php echo esc_html($value['op_value']); ?>"<?php echo $checkme; ?>><?php echo esc_html($value['op_name']); ?></option><?php
 		} ?>
 	</select>
 </div>
@@ -110,16 +110,16 @@ function bcSANY_select_box($arg){
 function bcSANY_radio_input($arg){
 ?>
 <div class="bcSANY_radio_wrapper">
-	<label for="bcSANY_<?php echo $arg['name']; ?>">
+	<label for="bcSANY_<?php echo esc_html($arg['name']); ?>">
         <ul>
 		<?php // making a list of the options
 		foreach($arg['options'] as $name => $value){
 			if($value['var']==$arg['selected']){$checkme=' checked';}else{$checkme='';}
 			?><li><label>
               <input type="radio" 
-                     value="<?php echo $value['var']; ?>"
-                     name="bcSANY_<?php echo $arg['name']; ?>" 
-                     <?php echo $checkme; ?>><?php echo $value['var_name']; ?></label></li><?php
+                     value="<?php echo esc_html($value['var']); ?>"
+                     name="bcSANY_<?php echo esc_html($arg['name']); ?>" 
+                     <?php echo $checkme; ?>><?php echo esc_html($value['var_name']); ?></label></li><?php
 		} ?>
         </ul>
 	</label>
@@ -135,8 +135,8 @@ function bcSANY_input_field($arg){
 ?>
 <div class="bcSANY_input_wrapper">
 	<input type="text"
-		   name="bcSANY_<?php echo $arg['name']; ?>"
-		   value="<?php echo $arg['selected']; ?>"
+		   name="bcSANY_<?php echo esc_html($arg['name']); ?>"
+		   value="<?php echo esc_html($arg['selected']); ?>"
 		   class="regular-text"
 		   />
 </div>
@@ -150,10 +150,10 @@ function bcSANY_input_field($arg){
 function bcSANY_textarea_field($arg){
 ?>
 <div class="bcSANY_textarea_wrapper">
-	<textarea name="bcSANY_<?php echo $arg['name']; ?>" 
+	<textarea name="bcSANY_<?php echo esc_html($arg['name']); ?>" 
 			  class="large-text code"
 			  rows="10"
-			  cols="50"><?php echo $arg['selected']; ?></textarea>
+			  cols="50"><?php echo esc_html($arg['selected']); ?></textarea>
 </div>
 <?php	
 }
@@ -177,9 +177,9 @@ function bcSANY_imageselect_field($arg){
 	<script type="text/javascript">
 	jQuery(document).ready(function() {
 		var $ = jQuery;
-		if ($('.<?php echo 'bcSANY_'.$arg['name']; ?>').length > 0) {
+		if ($('.<?php echo 'bcSANY_'.esc_html($arg['name']); ?>').length > 0) {
 			if ( typeof wp !== 'undefined' && wp.media && wp.media.editor) {
-				$('.<?php echo 'bcSANY_'.$arg['name']; ?>').on('click', function(e) {
+				$('.<?php echo 'bcSANY_'.esc_html($arg['name']); ?>').on('click', function(e) {
 					e.preventDefault();
 					var button = $(this);
 					var id = button.prev();
@@ -197,7 +197,7 @@ function bcSANY_imageselect_field($arg){
 	<?php 
 	if($img != "") { ?>
 	<div class="bcSANY_thumbnail">
-		<img src="<?= $img[0]; ?>" width="80px" />
+		<img src="<?php esc_html($img[0]); ?>" width="80px" />
 		<p><?php _e('The currently selected image.','betaanalytics'); ?></p>
 	</div>
 	<p><?php _e('Select a new image or paste a image ID to replace the one above:','betaanalytics'); ?></p>
@@ -206,14 +206,14 @@ function bcSANY_imageselect_field($arg){
 	<p><?php _e('Select an image or paste an image ID:','betaanalytics'); ?></p>	
 	<?php }	?>
 	<input type="text" 
-		   value="<?php echo $arg['selected']; ?>" 
+		   value="<?php echo esc_html($arg['selected']); ?>" 
 		   class="regular-text process_custom_images" 
 		   id="process_custom_images" 
-		   name="<?php echo 'bcSANY_'.$arg['name']; ?>" 
+		   name="<?php echo 'bcSANY_'.esc_html($arg['name']); ?>" 
 		   max="" 
 		   min="1" 
 		   step="1" />
-	<button class="<?php echo 'bcSANY_'.$arg['name']; ?> button"><?php _e('Media library','betaanalytics'); ?></button>
+	<button class="<?php echo 'bcSANY_'.esc_html($arg['name']); ?> button"><?php _e('Media library','betaanalytics'); ?></button>
 	</div>
 	<?php
 }

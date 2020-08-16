@@ -1,11 +1,11 @@
 <?php 
 /**
 * Plugin Name: Super Simple Analytics Tag
-* Plugin URI: https://betacore.tech/plugins/simple-analytics-tag-for-wordpress/
-* Description: Google Analytics and Google Tagmanager made simple. Works with Wordpress 5.3 Kirk.
-* Version: 1.3.1
-* Author: Rik Janssen (Beta)
-* Author URI: https://betacore.tech/
+* Plugin URI: https://rikjanssen.info/plugins/simple-analytics-tag-for-wordpress/
+* Description: Google Analytics and Google Tagmanager made easy. 
+* Version: 1.3.2
+* Author: Rik Janssen
+* Author URI: https://rikjanssen.info/
 * Text Domain: betaanalytics
 * Domain Path: /lang
 **/
