@@ -1,18 +1,21 @@
 === Simple Analytics Tag ===
 Contributors: @betacore
 Tags: google analytics, google tagmanager, google ID, GTM, UA
-Donate link: https://www.patreon.com/betadev
+Donate link: https://www.patreon.com/wpaudit
 Requires at least: 5.2
-Tested up to: 5.5
+Tested up to: 5.5.1
 Requires PHP: 7
-Stable tag: 1.3.2
+Stable tag: 1.4.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Embedding Google Analytics and Google Tagmanager made easy.
+Placing Google Analytics and Google Tagmanager tags on your website made easy. 
 
 == Description ==
-Simple Analytics Tag helps you get up and running quick. This plugin has a non-intrusive interface and fits very well within the Wordpress Settings menu. Just paste in the ID from Google Tagmanager or Google Analytics and you are good to go. For older themes that don't support the hook right after the body tag there is a function available you can throw in to make it work. Easy!
+Simple Analytics Tag helps you get up and running quick. 
+This plugin has a non-intrusive interface and fits very well within the Wordpress Settings menu. 
+Just paste in the ID from Google Tagmanager or Google Analytics and you are good to go. 
+For older themes that don't support the hook right after the body tag there is a function available you can throw in to make it work. Easy!
 
 = Simple Analytics Tag contains the following features: =
 * Google Tagmanager Code 
@@ -23,6 +26,9 @@ Simple Analytics Tag helps you get up and running quick. This plugin has a non-i
 
 = Note that there are themes that don't have the 'wp_body_open();' hook below the body tag =
 For these older themes there is the option to put the second half of the Google Tagmanager code in the footer. This is not optimal but still works. If you have a custom theme you can add the hook below the body yourself or request an update on your theme at the shop that created it. Eitherway this plugin will work on the themes that have or do not have the hook. You will have to look in the source code if both Google Tagmanager code blocks are loaded.
+
+= DIY =
+For the DIY people there is an custom function you can use to paste the code in place.
 
 == Installation ==
 1. Upload the unpacked folder to the "/wp-content/plugins/" directory.
@@ -53,6 +59,11 @@ No. The entire thing is free and will be for the unforseeable future. A cup of c
 1. Add your UA or GTM code in the field. For GTM codes there are extra settings.
 
 == Changelog ==
+= 1.4.1 =
+* Big code overhaul, refactored a lot
+* Small interface changes to make it cleaner and more Wordpressy
+* Small bug fixes here and there
+
 = 1.3.2 =
 * Branding update
 * Precautionary extra sanitisation

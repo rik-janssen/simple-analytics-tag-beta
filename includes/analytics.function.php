@@ -3,11 +3,11 @@
 /* ---------------------------------------- */
 /* The Tracking tag for GA and TM header    */
 
-function bcSANY_tracking_head(){
+function bcSSAT_tracking_head(){
     
-     $the_google_id = substr(get_option( 'bcSANY_google_tags' ), 0,16);
+     $the_google_id = substr(get_option( 'bcSSAT_google_tags' ), 0,16);
     
-    if(bcSANY_tag_type()=='UA'){
+    if(bcSSAT_tag_type()=='UA'){
         ?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_html($the_google_id); ?>"></script>
@@ -20,7 +20,7 @@ function bcSANY_tracking_head(){
         </script>
         <?php
         
-    }elseif(bcSANY_tag_type()=='GTM'){
+    }elseif(bcSSAT_tag_type()=='GTM'){
         ?>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -33,18 +33,18 @@ function bcSANY_tracking_head(){
     }
 }
 
-add_action( 'wp_head', 'bcSANY_tracking_head' , 5);
+add_action( 'wp_head', 'bcSSAT_tracking_head' , 5);
 
 
 /* ---------------------------------------- */
 /* The TM body function, for new themes     */
 
-function bcSANY_tracking_body(){
+function bcSSAT_tracking_body(){
     
-    $the_google_id = substr(get_option( 'bcSANY_google_tags' ), 0,16);
-    $setting_gtm_diy = substr(get_option( 'bcSANY_google_embed' ), 0,1);
+    $the_google_id = substr(get_option( 'bcSSAT_google_tags' ), 0,16);
+    $setting_gtm_diy = substr(get_option( 'bcSSAT_google_embed' ), 0,1);
     if($setting_gtm_diy==0){
-        if(bcSANY_tag_type()=='GTM'){
+        if(bcSSAT_tag_type()=='GTM'){
             ?>
             <!-- Google Tag Manager (noscript) -->
             <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo esc_html($the_google_id); ?>"
@@ -56,18 +56,18 @@ function bcSANY_tracking_body(){
     
 }
 
-add_action( 'wp_body_open', 'bcSANY_tracking_body' , 1);
+add_action( 'wp_body_open', 'bcSSAT_tracking_body' , 1);
 
 
 /* ---------------------------------------- */
 /* The TM body function, for old themes     */
 
-function bcSANY_tracking_footer(){
+function bcSSAT_tracking_footer(){
     
-    $the_google_id = substr(get_option( 'bcSANY_google_tags' ), 0,16);
-    $setting_gtm_diy = substr(get_option( 'bcSANY_google_embed' ), 0,1);
+    $the_google_id = substr(get_option( 'bcSSAT_google_tags' ), 0,16);
+    $setting_gtm_diy = substr(get_option( 'bcSSAT_google_embed' ), 0,1);
     if($setting_gtm_diy==2){
-        if(bcSANY_tag_type()=='GTM'){
+        if(bcSSAT_tag_type()=='GTM'){
             ?>
             <!-- Google Tag Manager (noscript) -->
             <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo esc_html($the_google_id); ?>"
@@ -79,20 +79,20 @@ function bcSANY_tracking_footer(){
     
 }
 
-add_action( 'wp_footer', 'bcSANY_tracking_footer' , 1);
+add_action( 'wp_footer', 'bcSSAT_tracking_footer' , 1);
 
 
 /* ---------------------------------------- */
 /* The TM body function, for custom and old */
 
-function bcSANY_tm_body(){
+function bcSSAT_tm_body(){
     
-    $the_google_id = substr(get_option( 'bcSANY_google_tags' ), 0,16);
-    $setting_gtm_diy = substr(get_option( 'bcSANY_google_embed' ), 0,1);
+    $the_google_id = substr(get_option( 'bcSSAT_google_tags' ), 0,16);
+    $setting_gtm_diy = substr(get_option( 'bcSSAT_google_embed' ), 0,1);
 
     /* this is the DIY function */
     if($setting_gtm_diy==1){
-         if(bcSANY_tag_type()=='GTM'){
+         if(bcSSAT_tag_type()=='GTM'){
             ?>
             <!-- Google Tag Manager (noscript) -->
             <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo esc_html($the_google_id); ?>"
@@ -109,9 +109,9 @@ function bcSANY_tm_body(){
 /* ---------------------------------------- */
 /* Get the full type code                   */
 
-function bcSANY_tag_type(){
+function bcSSAT_tag_type(){
     
-    $the_google_tag = substr(get_option( 'bcSANY_google_tags' ), 0,2);
+    $the_google_tag = substr(get_option( 'bcSSAT_google_tags' ), 0,2);
     
     if($the_google_tag=='GT'){$the_google_tag='GTM';}
     

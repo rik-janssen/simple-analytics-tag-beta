@@ -1,10 +1,9 @@
 <?php
 
-
 /* ---------------------------------------- */
 /* Setting up the navigation */
 
-function bcSANY_admin_menu_analytics_siteoffline() {
+function bcSSAT_nav() {
     
     // add the sub menu page for the plugin
 	// https://codex.wordpress.org/Adding_Administration_Menus
@@ -13,14 +12,8 @@ function bcSANY_admin_menu_analytics_siteoffline() {
         'Analytics Tag', 
         'Analytics Tag', 
         'manage_options', 
-        'bcSANY_analytics', 
-        'bcSANY_function_for_analytics'  // this should correspond with the function name
+        'bcSSAT_analytics', 
+        'bcSSAT_function_for_analytics'  // this should correspond with the function name
     ); 
 }
-add_action( 'admin_menu', 'bcSANY_admin_menu_analytics_siteoffline' );
-
-
-
-
-
-?>
+add_action( 'admin_menu', 'bcSSAT_nav' );
